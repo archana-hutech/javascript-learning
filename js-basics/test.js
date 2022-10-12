@@ -1,4 +1,8 @@
-// dhvgyd
+//browser display 
 console.log("Hello");
 
-//dhfffyd
+//getElementById("").innerHTML
+function changeContent(){
+document.getElementById("demo").innerHTML="paragraph content changed";
+}
+
