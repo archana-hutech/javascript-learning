@@ -553,9 +553,9 @@ console.log(txt38.endsWith("Doe"));
 
 //creating an array
 const cars1 = [];
-cars1[0]= "Saab";
-cars1[1]= "Volvo";
-cars1[2]= "BMW";
+cars1[0] = "Saab";
+cars1[1] = "Volvo";
+cars1[2] = "BMW";
 console.log(cars1);
 
 const cars2 = new Array("Saab", "Volvo", "BMW"); //using new 
@@ -567,7 +567,7 @@ console.log(car2);
 cars3[0] = "Opel";                    //changing the element
 console.log(cars3);
 
-console.log(cars3.length) ;  // Returns the number of elements
+console.log(cars3.length);  // Returns the number of elements
 console.log(cars3.sort());   // Sorts the array
 
 const fruits = ["Banana", "Orange", "Apple"];
@@ -586,3 +586,256 @@ console.log(fruits instanceof Array);
 // Create an array with one element:
 const points = [40];
 console.log(points);
+
+//array methods
+const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits1.toString());
+
+console.log(fruits1.join(" * "));                       // join() method
+
+var rr1 = ["AngularJs", "Node.js", "JQuery"]
+var res1 = rr1.join()                                   // join() method
+console.log(res1);
+
+var rr2 = ["AngularJs", "Node.js", "JQuery"]
+var res4 = rr2.join('-')                                    // join() method
+console.log(res4);
+
+console.log(fruits1.pop());                               // pop() method
+
+var num1 = [1, 4, 9];
+var ele1 = num1.pop();
+console.log("element is : " + ele1);                     // pop() method
+
+var ele2 = num1.pop();
+console.log(ele2);
+
+var rr3 = ["AngularJS", "Node.js", "JQuery"];
+console.log("Orginal array: " + rr3);
+console.log("Extracted element: " + rr3.pop());          // pop() method
+console.log("Remaining elements: " + rr3);
+
+console.log(fruits1.push("Kiwi"));                      // push() method
+
+var rr4 = ["AngularJS", "Node.js"];
+rr4.push("JQuery");                                     // push() method
+console.log(rr4);
+
+var rr5 = ["AngularJS", "Node.js"];
+console.log("Length before invoking push(): " + rr5.length);
+rr5.push("JQuery", "Bootstrap");                             // push() method
+console.log("Length after invoking push(): " + rr5.length);
+console.log("Update array: " + rr5);
+
+let fruit1 = fruits1.shift();                            // shift() method
+console.log(fruit1);
+
+var element = [105, 1, 2, 3].shift();
+console.log("Removed element is : " + element);          // shift() method
+
+var ar2 = ["AngularJS", "Node.js", "JQuery"];
+var res2 = ar2.shift();                                // shift() method
+console.log(res2);
+
+console.log(fruits1.unshift("Lemon"));                   // unshift() method
+console.log(fruits1);
+
+var ar3 = new Array("orange", "mango", "banana", "sugar");
+var len1 = ar3.unshift("water");
+console.log(len1);                                      // unshift() method
+
+var ar4 = ["AngularJS", "Node.js"];
+var res3 = ar4.unshift("JQuery");
+console.log(ar4);
+
+fruits1[0] = "grapes";                                   // changing an array element
+console.log(fruits1);
+
+fruits1[fruits1.length] = "lemon";                       // append new element to an array
+console.log(fruits1);
+
+console.log(delete fruits1[0]);
+console.log(fruits1[0]);                                 // undefined
+
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys);                // merging the arrays
+console.log(myChildren);
+
+const arr1 = ["Cecilie", "Lone"];
+const arr2 = ["Emil", "Tobias", "Linus"];
+const arr3 = ["Robin", "Morgan"];
+const myChildren1 = arr1.concat(arr2, arr3);
+console.log(myChildren1);
+
+var arr6 = ["C", "C++", "Python"];
+var arr7 = ["Java", "JavaScript", "Android"];
+var result = arr6.concat(arr7);
+console.log(result);
+
+var alpha = ["a", "b", "c"];
+var numeric = [1, 2, 3];
+var alphaNumeric = alpha.concat(numeric);
+console.log(alphaNumeric);
+
+var result1 = arr6.concat("Java", "JavaScript", "Android");  // merging an array with values
+console.log(result1);
+
+const arr4 = ["Emil", "Tobias", "Linus"];
+const myChildren3 = arr4.concat("Peter");                 // merging an array with values
+
+const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+fruits2.splice(2, 0, "Lemon", "Kiwi");
+console.log(fruits2);
+fruits2.splice(2, 2, "Lemon", "Kiwi");
+console.log(fruits2);
+fruits2.splice(0, 1);
+console.log(fruits2);
+
+const fruits3 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits3.slice(1);
+console.log(citrus);
+
+const citrus1 = fruits3.slice(3);
+console.log(citrus1);
+
+const citrus2 = fruits.slice(1, 3);
+console.log(citrus2);
+
+//array sorting
+const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits4.sort());
+
+console.log(fruits4.reverse());
+
+var r1 = [0, 1, 2, 3].reverse();
+console.log("Reversed array is : " + r1);                // reverse() method
+
+var r2 = ["AngulaJS", "Node.js", "JQuery"];
+var rev = r2.reverse();                                  // reverse() method
+console.log(rev);
+
+//numeric sorting
+const points1 = [40, 100, 1, 5, 25, 10];
+points1.sort(function (a, b) { return a - b });
+console.log(points1);
+console.log(points1[0]);                                   // min value
+console.log(points1[points1.length - 1]);                  // max value
+
+points1.sort(function (a, b) { return b - a });
+console.log(points1);
+console.log(points1[0]);                                  // max value
+console.log(points1[points1.length - 1]);                 // min value
+
+function myArrayMax(points1) {
+    return Math.max.apply(null, points1);
+}
+console.log(myArrayMax(points1));
+
+function myArrayMin(points1) {
+    return Math.min.apply(null, points1);
+}
+console.log(myArrayMin(points1));
+
+//array iteration
+const numbers = [45, 4, 9, 16, 25];
+let t1 = "";
+numbers.forEach(myFun1);
+function myFun1(value, index, array) {
+    t1 += value + " ";
+}
+console.log(t1);
+
+const numbers1 = [45, 4, 9, 16, 25];
+let t2 = "";
+numbers1.forEach(myFun2);
+function myFun2(value) {
+    t2 += value + " ";
+}
+console.log(t2);
+
+const numbers3 = [45, 4, 9, 16, 25];                    // map() method
+const numbers4 = numbers3.map(myFun3);
+
+// function myFun3(value, index, array) {
+//     return value * 2;
+// }
+console.log(numbers4);
+
+function myFun3(value) {
+    return value * 2;
+}
+
+const t3 = numbers3.filter(myFun4)                       // fiter() method        
+function myFun4(value, index, numbers3) {
+    return value > 18;
+}
+console.log(t3);
+
+// function myFun4(value) {
+//     return value > 18;
+//   }
+
+let sum = numbers3.reduce(myFun5);                        // reduce() method
+function myFun5(total, value) {
+    return total + value;
+}
+console.log(sum);
+
+let allOver18 = numbers3.every(myFun6);                   // every() method
+function myFun6(value) {
+    return value > 18;
+}
+console.log(allOver18);
+
+var marks = [50, 40, 45, 37, 20];
+function check(value) {
+    return value > 30;                                   // return false, as marks[4]=20  
+}
+console.log(marks.every(check));                         // every() method
+
+function test(element, index, array) {
+    return index < 4;
+}
+console.log([21, 32, 2, 43].every(test));                 // true  
+console.log([21, 32, 2, 43, 35].every(test));             // false  
+
+let someOver18 = numbers3.some(myFun7);                   // some() method
+function myFun7(value, index, array) {
+    return value > 18;
+}
+console.log(someOver18);
+
+let first = numbers3.find(myFun8);                       // find()  method
+function myFun8(value, index, array) {
+    return value > 18;
+}
+console.log(first);
+
+const numbers6 = [4, 9, 16, 25, 29];                     // findIndex() method
+let first1 = numbers6.findIndex(myFun9);
+
+function myFun9(value, index, array) {
+    return value > 18;
+}
+console.log(first1);
+
+console.log(Array.from("ABCDEFG"));                         // array creation from string
+
+var ar1 = Array.from("You are viewing an example of string"); //The string will get converted to an array.  
+console.log(ar1);
+
+const ft1 = ["Banana", "Orange", "Apple", "Mango"];         // read key-value pair
+const f4 = ft1.entries();
+for (let e of f4) {
+    console.log(e);
+}
+
+var arr9 = ['John', 'Michael', 'Embrose', 'Herry', 'Lewis'];
+var itr = arr9.entries();
+for (var e1 of itr)                                          // for loop using var.  
+{
+    console.log(e1);
+}
+
+console.log(ft1.includes("Mango"));                         // is true
