@@ -839,3 +839,273 @@ for (var e1 of itr)                                          // for loop using v
 }
 
 console.log(ft1.includes("Mango"));                         // is true
+
+//JS date()
+const d1 = new Date();
+console.log(d1);
+
+const d2 = new Date(2018, 11, 24, 10, 33, 30, 0);
+console.log(d2);
+
+//Specifying a month higher than 11, will not result in an error but add the overflow to the next year
+const d3 = new Date(2018, 15, 24, 10, 33, 30);
+const d4 = new Date(2019, 3, 24, 10, 33, 30);              //same as d3
+console.log(d4);
+
+//Specifying a day higher than max, will not result in an error but add the overflow to the next month
+const d5 = new Date(2018, 5, 35, 10, 33, 30);
+const d6 = new Date(2018, 6, 5, 10, 33, 30);
+console.log(d6);
+
+//5 numbers specify year, month, day, hour, and minute:
+const d7 = new Date(2018, 11, 24, 10, 33);
+console.log(d7);
+
+const d8 = new Date(2018, 11, 24, 10);                 // 4 number specify
+console.log(d8);
+
+const d9 = new Date(2018, 11, 24);                    // 3 numbers specify
+console.log(d9);
+
+const d10 = new Date(2018, 11);                       // 2
+console.log(d10);
+
+const d11 = new Date(2018);                          // If you supply only one parameter it will be treated as milliseconds.
+console.log(d11);
+
+const d12 = new Date(99, 11, 24);                   // One and two digit years will be interpreted as 19xx:
+console.log(d12);
+
+const d13 = new Date(9, 11, 24);
+console.log(d13);
+
+const d14 = new Date("October 13, 2014 11:13:00");  // creates a new date object from a date string
+console.log(d14);
+
+const d15 = new Date(0);                            // date(millisec) 
+console.log(d15);
+
+//01 January 1970 plus 100 000 000 000 milliseconds is approximately 03 March 1973
+const d16 = new Date(100000000000);
+console.log(d16);
+
+//January 01 1970 minus 100 000 000 000 milliseconds is approximately October 31 1966
+const d17 = new Date(-100000000000);
+console.log(d17);
+
+const d18 = new Date(86400000);                      // One day (24 hours) is 86 400 000 milliseconds.
+console.log(d18);
+
+const d19 = new Date();
+console.log(d19.toString());                        // converted to a string, with the toString()
+
+const d20 = new Date();
+console.log(d20.toUTCString());                    // converts a date to a UTC string (a date display standard)
+
+const d21 = new Date();
+console.log(d21.toDateString());                   // converts a date to a more readable format
+
+const d22 = new Date();
+console.log(d22.toISOString());
+
+const d23 = new Date("2015-03-25");
+console.log(d23);
+
+const d24 = new Date("2015-03");
+console.log(d24);
+
+const d25 = new Date("2015");
+console.log(d25);
+
+const d26 = new Date("03/25/2015");               // short date
+console.log(d26);
+
+const d27 = new Date("Mar 25 2015");               // long date
+console.log(d27);
+
+const d28 = new Date("25 Mar 2015");               // long date
+console.log(d28);
+
+const d29 = new Date("Jan 25 2015");
+console.log(d29);
+
+const d30 = new Date("JANUARY, 25, 2015");
+console.log(d30)
+
+let msec = Date.parse("March 21, 2012");         //returns the number of milliseconds between the date and January 1, 1970
+console.log(msec);
+
+//Math.method(number)
+console.log(Math.round(4.6));                 // returns the nearest integer:
+
+console.log(Math.round(4.5));
+
+console.log(Math.round(4.4));
+
+console.log(Math.ceil(4.9));
+console.log(Math.ceil(4.7));
+console.log(Math.ceil(4.4));
+console.log(Math.ceil(4.2));
+console.log(Math.ceil(-4.2));
+
+console.log(Math.floor(4.9));
+console.log(Math.floor(4.7));
+console.log(Math.floor(4.4));
+console.log(Math.floor(4.2));
+console.log(Math.floor(-4.2));
+
+console.log(Math.trunc(4.9));
+console.log(Math.trunc(4.7));
+console.log(Math.trunc(4.4));
+console.log(Math.trunc(4.2));
+console.log(Math.trunc(-4.2));
+
+console.log(Math.sign(-4));
+console.log(Math.sign(0));
+console.log(Math.sign(4));
+
+console.log(Math.pow(8, 2));
+
+console.log(Math.sqrt(64));
+
+console.log(Math.abs(-4.7));
+
+console.log(Math.min(0, 150, 30, 20, -8, -200));
+console.log(Math.max(0, 150, 30, 20, -8, -200));
+
+// Returns a random number:
+console.log(Math.random());
+
+// Returns a random integer from 0 to 9:
+console.log(Math.floor(Math.random() * 10));
+
+// Returns a random integer from 0 to 10:
+console.log(Math.floor(Math.random() * 11));
+
+// Returns a random integer from 0 to 100:
+console.log(Math.floor(Math.random() * 101));
+
+// Returns a random integer from 1 to 10:
+console.log(Math.floor(Math.random() * 10) + 1)
+
+// Returns a random integer from 1 to 100:
+console.log(Math.floor(Math.random() * 100) + 1);
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+console.log(getRndInteger(0, 9));
+
+function getRndInteger1(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(getRndInteger1(1, 10));
+
+console.log(Math.log(1));
+
+console.log(Math.log(10));
+
+console.log(Math.log2(8));
+
+console.log(Math.log10(1000));
+
+//JS boolean
+console.log(Boolean(10 > 9));
+
+//everything with value is true
+console.log(Boolean(100));
+
+console.log(Boolean(3.14));
+
+console.log(Boolean(-15));
+
+console.log(Boolean("Hello"));
+
+console.log(Boolean("false"));
+
+console.log(Boolean(7 + 1 + 3.14));
+
+//without value is false
+let bl1 = 0;
+console.log(Boolean(bl1));
+
+
+let bl2 = -0;
+console.log(Boolean(bl2));
+
+let bl3 = "";
+console.log(Boolean(bl3));
+
+let bl4;
+console.log(Boolean(bl4));
+
+let bl5 = false;
+console.log(Boolean(bl5));
+
+let bl6 = null;
+console.log(Boolean(bl6));
+
+let bl17 = 10 / "Hallo";
+console.log(Boolean(bl17));
+
+let bl18 = false;                                   // typeof bl18 returns boolean
+let bl19 = new Boolean(false);                      // typeof bl19 returns object
+
+//JS comparisons
+let c1 = 5;
+
+console.log(c1 == 8);
+console.log(c1 == 5);
+console.log(c1 == "5");
+console.log(c1 === 5);
+console.log(c1 === "5");
+console.log(c1 !== 5);
+console.log(c1 !== "5");
+console.log(c1 !== 8);
+console.log(c1 > 8);
+console.log(c1 < 8);
+console.log(c1 >= 8);
+console.log(c1 <= 8);
+
+//logical operators
+let c2 = 6;
+let c3 = 3;
+
+console.log((c2 < 10 && c3 > 1));
+console.log(c2 < 10 && c3 < 1);
+console.log(c2 == 5 || c3 == 5);
+console.log(c2 == 6 || c3 == 0);
+console.log(c2 == 0 || c3 == 3);
+console.log(c2 == 6 || c3 == 3);
+
+console.log(!(c2 === c3));
+console.log(!(c2 > c3));
+
+function myAge() {
+    let age = document.getElementById("age").value;
+    let voteable = (age < 18) ? "Too young" : "Old enough";
+    document.getElementById("de").innerHTML = voteable + " to vote.";
+}
+
+//comparing different types
+console.log(2 < 12);
+console.log(2 < "12");
+console.log(2 < "John");
+console.log(2 > "John");
+console.log(2 == "John");
+console.log("2" < "12");
+console.log("2" > "12");
+console.log("2" == "12");
+
+let name1 = null;
+let te1 = "missing";
+let rt = name1 ?? te1;                          // Nullish Coalescing Operator 
+//console.log(name1);                             // null
+console.log(rt);                                // missing
+
+// Create an object:
+const cr1 = { type: "Fiat", model: "500", color: "white" };
+// Ask for car name:                            // Optional Chaining Operator
+console.log(cr1?.name);                         // undefind
+console.log(cr1?.type);                         // fiat
+
