@@ -1109,3 +1109,248 @@ const cr1 = { type: "Fiat", model: "500", color: "white" };
 console.log(cr1?.name);                         // undefind
 console.log(cr1?.type);                         // fiat
 
+//JS if stmt
+if (new Date().getHours() < 18) {
+    console.log("good day");
+}
+
+var age = 20;
+if (age > 18) {
+    console.log("Qualifies for driving");
+}
+
+var a2 = 20;
+if (a2 > 10) {
+    console.log("value of a is greater than 10");
+}
+
+//if-else
+let greeting;
+if (20 < 18) {
+    console.log(greeting = "Good day");
+
+} else {
+    console.log(greeting = "Good evening");
+}
+
+var a3 = 20;
+if (a3 % 2 == 0) {
+    console.log("a is even number");
+}
+else {
+    console.log("a is odd number");
+}
+
+var ag1 = 22;
+if (ag1 > 18) {
+    console.log("Qualifies for driving");
+} else {
+    console.log("Does not qualify for driving");
+}
+
+//if else-if
+let time = 18;
+if (time < 10) {
+    console.log(greeting = "Good morning");
+} else if (time < 20) {
+    console.log(greeting = "Good day");
+} else {
+    console.log(greeting = "Good evening");
+}
+
+var ag2 = 20;
+if (ag2 == 10) {
+    console.log("a is equal to 10");
+}
+else if (ag2 == 15) {
+    console.log("a is equal to 15");
+}
+else if (ag2 == 20) {
+    console.log("a is equal to 20");
+}
+else {
+    console.log("a is not equal to 10, 15 or 20");
+}
+
+var book = "maths";
+if (book == "history") {
+    console.log("History Book");
+} else if (book == "maths") {
+    console.log("Maths Book");
+} else if (book == "economics") {
+    console.log("Economics Book");
+} else {
+    console.log("Unknown Book");
+}
+
+//Switch-stmt
+let day;
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+}
+console.log(day);
+
+var grade = 'B';
+var rslt;
+switch (grade) {
+    case 'A':
+        rslt = "A Grade";
+        break;
+    case 'B':
+        rslt = "B Grade";
+        break;
+    case 'C':
+        rslt = "C Grade";
+        break;
+    default:
+        rslt = "No Grade";
+}
+console.log(rslt);
+
+var grade1 = 'A';
+switch (grade1) {                                 //using without break
+    case 'A': console.log("Good job");
+    case 'B': console.log("Pretty good");
+    case 'C': console.log("Passed");
+    case 'D': console.log("Not so good");
+    case 'F': console.log("Failed");
+    default: console.log("Unknown grade")
+}
+
+// JS for loop
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+const cs1 = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+for (let i = 0; i < cs1.length; i++) {
+    console.log(cs1[i]);
+}
+
+for (let i = 0, len = cs1.length, xt = ""; i < len; i++) {
+    console.log(xt += cs1[i] + " ");
+}
+
+let i = 2;
+let ln1 = cs1.length;
+let xt2 = "";
+for (; i < ln1; i++) {
+    console.log(xt2 += cs1[i] + " ");
+}
+
+let i1 = 0;
+let ln2 = cs1.length;
+let xt3 = "";
+for (; i1 < ln2;) {
+    xt3 += cs1[i1] + " ";
+    console.log(xt3);
+    i1++;
+}
+
+var cnt1;
+console.log("Starting Loop");
+for (cnt1 = 0; cnt1 < 10; cnt1++) {
+    console.log("Current Count : " + cnt1);
+}
+console.log("Loop stopped!");
+
+const per1 = { fname: "John", lname: "Doe", age: 25 };       // for in
+for (let p in per1) {
+    console.log(per1[p]);
+}
+
+const num3 = [45, 4, 9, 16, 25];                            // for in
+for (let n in num3) {
+    console.log(num3[n]);
+}
+
+const cs2 = ["BMW", "Volvo", "Mini"];                      // for of
+for (let g of cs2) {
+    console.log(g);
+}
+
+let language = "JavaScript";
+for (let l of language) {                                 // for of
+    console.log(l);
+}
+
+let h3 = "language";
+for (let v of h3) {                                       // for of
+    console.log(v);
+}
+
+let i3 = 0;
+while (i3 < 7) {
+    console.log(i3)                                      // while loop
+    i3++;
+}
+
+var i4 = 11;
+while (i4 <= 15) {                                       // while loop
+    console.log(i4);
+    i4++;
+}
+
+var cnt2 = 0;
+console.log("Starting Loop ");
+
+while (cnt2 < 10) {                                      // while loop
+    console.log(cnt2)
+    cnt2++;
+}
+
+console.log("Loop stopped!");
+
+let tc = 0;
+do {                                                     // do-while loop                                           
+    console.log(tc);
+    tc++;
+}
+while (tc < 10);
+
+var z = 21;
+do {                                                    // do-while loop
+    console.log(z);
+    z++;
+} while (z <= 25);
+
+var ct3 = 0;
+console.log("Starting Loop");
+do {                                                    // do-while loop
+    console.log("Current Count : " + ct3);
+    ct3++;
+}
+while (ct3 < 5);
+console.log("Loop stopped!");
+
+
+for (let gh = 0; gh < 10; gh++) {                        // break stmt
+    if (gh === 3) { break; }
+    console.log(gh);
+}
+
+for (let fg = 0; fg < 10; fg++) {                        // continue stmt
+    if (fg === 3) { continue; }
+    console.log(fg);
+}
+
