@@ -314,23 +314,23 @@ cars1[1] = "Volvo";
 cars1[2] = "BMW";
 console.log(cars1);
 
-const cars2 = new Array("Saab", "Volvo", "BMW"); //using new 
+const cars2 = new Array("Saab", "Volvo", "BMW");      // using new 
 
 //accessing elements
 const cars3 = ["Saab", "Volvo", "BMW"];
 let car2 = cars3[0];
 console.log(car2);
-cars3[0] = "Opel";                    //changing the element
+cars3[0] = "Opel";                                   // changing the element
 console.log(cars3);
 
-console.log(cars3.length);  // Returns the number of elements
-console.log(cars3.sort());   // Sorts the array
+console.log(cars3.length);                          // Returns the number of elements
+console.log(cars3.sort());                          // Sorts the array
 
 const fruits = ["Banana", "Orange", "Apple"];
-fruits.push("Lemon");  // Adds a new element (Lemon) to fruits
+fruits.push("Lemon");                               // Adds a new element (Lemon) to fruits
 //console.log(fruits);
 
-fruits[fruits.length] = "jjj";  // Adds  to fruits
+fruits[fruits.length] = "jjj";                      // Adds  to fruits
 console.log(fruits);
 
 let type = typeof fruits;
@@ -497,6 +497,8 @@ console.log(myArrayMin(points1));
 const numbers = [45, 4, 9, 16, 25];
 let t1 = "";
 numbers.forEach(myFun1);
+let aaa = numbers.forEach((ele) => console.log(ele * ele));
+console.log({ aaa });
 function myFun1(value, index, array) {
     t1 += value + " ";
 }
@@ -1110,3 +1112,164 @@ for (let fg = 0; fg < 10; fg++) {                        // continue stmt
     console.log(fg);
 }
 
+//JS Set
+//----------------------------------
+
+// Create a Set
+const lett1 = new Set(["a", "b", "c"]);
+
+// Create a Set
+const letters1 = new Set();
+
+// Add Values to the Set
+letters1.add("a");
+letters1.add("b");
+letters1.add("c");
+
+
+letters1.add("d");
+letters1.add("e");
+
+console.log(letters1);
+
+// Create Variables
+const rs1 = "a";
+const rs2 = "b";
+const rs3 = "c";
+
+// Add Variables to the Set
+letters1.add(rs1);
+letters1.add(rs2);
+letters1.add(rs3);
+
+// List all Elements
+let ex = "";
+letters1.forEach(function (value) {
+    console.log(ex += value);
+})
+
+let ex2 = "";
+for (const j of letters1.values()) {
+    console.log(ex2 = j);
+}
+
+var set1 = new Set();
+set1.add("jQuery").add("AngularJS").add("Bootstrap");
+for (let elements1 of set1) {
+    console.log(elements1 + " ");
+}
+
+var set2 = new Set();
+set2.add("jQuery");
+set2.add("AngularJS");
+set2.add("Bootstrap");
+for (let elements2 of set2) {
+    console.log(elements2 + " ");
+}
+
+set2.forEach(function display(value) {
+    console.log(value);
+})
+
+//JS map
+
+// Create a Map
+const fruit2 = new Map([
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+]);
+console.log(fruit2);
+
+// Create a Map
+const fruit3 = new Map();
+
+// Set Map Values
+fruit3.set("apples", 500);
+fruit3.set("bananas", 300);
+fruit3.set("oranges", 200);
+console.log(fruit3);
+
+fruit2.set("apples", 200);
+console.log(fruit2);
+
+console.log(fruit2.get("apples"));                                      // Returns 200
+
+console.log(fruit2.size);                                               // return 3
+
+console.log(fruit2.delete("apples"));                                   // return true
+console.log(fruit2.has("apples"));                                      // return false
+
+// let xt1 = "";
+// fruit2.forEach(function (value, key) {
+//     xt1 += key + ' = ' + value + " ";
+// })
+// console.log(xt1);
+
+fruit2.forEach(function (value, key) {
+    console.log(key + ' = ' + value + " ");
+})
+
+// List all entries
+let xt6 = "";
+for (const j3 of fruit3.entries()) {
+    console.log(xt6 = j3 + " ");
+}
+
+//JS typeof operator
+console.log(typeof "John");                         // Returns "string"
+console.log(typeof 3.14);                           // Returns "number"
+console.log(typeof NaN);                            // Returns "number"
+console.log(typeof false);                          // Returns "boolean"
+console.log(typeof [1, 2, 3, 4]);                   // Returns "object"
+console.log(typeof { name: 'John', age: 34 });      // Returns "object"
+console.log(typeof new Date());                     // Returns "object"
+console.log(typeof function () { });                // Returns "function"
+console.log(typeof myCar);                          // Returns "undefined" *
+console.log(typeof null);                           // Returns "object"
+
+//constructor property
+console.log("John".constructor);                     // Returns function String()  {[native code]}
+console.log((3.14).constructor);                     // Returns function Number()  {[native code]}
+console.log(false.constructor);                      // Returns function Boolean() {[native code]}
+console.log([1, 2, 3, 4].constructor);               // Returns function Array()   {[native code]}
+console.log({ name: 'John', age: 34 }.constructor);  // Returns function Object()  {[native code]}
+console.log(new Date().constructor);                 // Returns function Date()    {[native code]}
+console.log(function () { }.constructor);            // Returns function Function(){[native code]}
+
+const fts1 = ["Banana", "Orange", "Apple", "Mango"];
+function isArray(myArray) {
+    return myArray.constructor === Array;
+}
+console.log(isArray(fts1));                          // true
+
+function isArray1(myArray) {
+    return myArray.constructor.toString().indexOf("Array") > -1;
+}
+console.log(isArray1(fts1));
+
+//difference between null & undefined
+
+console.log(typeof undefined);          // undefined
+console.log(typeof null);               // object
+
+console.log(null === undefined);         // false
+console.log(null == undefined);          // true
+
+
+//type conversion
+console.log(Number("3.14"));
+console.log(Number(Math.PI));
+console.log(Number(" "));
+console.log(Number(""));
+
+let u1 = "5";                          // y is a string
+let u2 = + y;                          // x is a number
+
+console.log(String(x));                // returns a string from a number variable x
+console.log(String(123));             // returns a string from a number literal 123
+console.log(String(100 + 23));        // returns a string from a number from an expression
+
+console.log(x.toString());
+console.log((123).toString());
+console.log((100 + 23).toString());
