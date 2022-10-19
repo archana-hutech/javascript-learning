@@ -1263,13 +1263,100 @@ console.log(Number(Math.PI));
 console.log(Number(" "));
 console.log(Number(""));
 
-let u1 = "5";                          // y is a string
-let u2 = + y;                          // x is a number
+let u1 = "5";                           // u1 is a string
+let u2 = + u1;                          // u2 is a number
 
-console.log(String(x));                // returns a string from a number variable x
-console.log(String(123));             // returns a string from a number literal 123
-console.log(String(100 + 23));        // returns a string from a number from an expression
+console.log(String(u1));                // returns a string from a number variable x
+console.log(String(123));               // returns a string from a number literal 123
+console.log(String(100 + 23));          // returns a string from a number from an expression
 
-console.log(x.toString());
+console.log(u1.toString());
 console.log((123).toString());
 console.log((100 + 23).toString());
+
+//JS error
+try {
+    adddlert("Welcome guest!");
+}
+catch (err) {
+    console.log(err.message);
+}
+
+//throws error
+function myFunction8($p) {
+    let msage = "";
+    try {
+        if ($p == "") throw "empty";
+        if (isNaN($p)) throw "not a number";
+        $p = Number($p);
+        if ($p < 5) throw "too low";
+        if ($p > 10) throw "too high";
+    }
+    catch (err1) {
+        console.log(msage = err1);
+    }
+}
+myFunction8("");
+
+function myJsErr(_q) {
+    let msage = "";
+    try {
+        if (_q == "") throw "empty";
+        if (isNaN(_q)) throw "not a number";
+        _q = Number(_q);
+        if (_q < 5) throw "too low";
+        if (_q > 10) throw "too high";
+    }
+    catch (jserr) {
+        console.log(msage = jserr);
+    }
+    finally {
+        console.log("finally");
+    }
+}
+myJsErr(3);
+
+//JS Errors
+
+let num4 = 1;
+try {
+    num4.toPrecision(500);                          // Range error
+}
+catch (err) {
+    console.log(err.name);
+}
+
+try {
+    num4 = no + 1;                                 // Reference error
+}
+catch (err) {
+    console.log(err.name);
+}
+
+
+try {
+    eval("alert('Hello)");                        // Syntax error
+}
+catch (err) {
+    console.log(err.name);
+}
+
+try {
+    num4.toUpperCase();                          // Type error
+}
+catch (err) {
+    console.log(err.name);
+}
+
+try {
+    decodeURI("%%%");                           // URI error
+}
+catch (err) {
+    console.log(err.name);
+}
+
+function myFuncn1() {
+    var carName = "Volvo";                    // Function Scope
+}
+
+
