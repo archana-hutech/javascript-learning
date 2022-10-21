@@ -1360,3 +1360,57 @@ function myFuncn1() {
 }
 
 
+//JS strict mode
+"use strict";
+hj = 3.14;                                    // This will cause an error (x is not defined).
+console.log(hj);
+
+"use strict";
+myAction();
+
+function myAction() {
+    rt = 3.14;
+    console.log(rt);                          // This will cause an error (y is not defined)
+}
+
+//this keyword
+
+// Create an object:
+const pers1 = {
+    firstName: "John",
+    lastName: "Doe",
+    id: 5566,
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
+};
+console.log(pers1.fullName());
+
+//arrow function
+
+helloArrow = () => {
+    return "Hello World!";
+}
+console.log(helloArrow());
+
+//This works only if the function has only one statement.
+hello = () => "Hello World!";
+console.log(hello());
+
+//Arrow Function With Parameters:
+helloParam = (val) => "Hello " + val;
+console.log(helloParam("hjj"));
+
+//Arrow Function Without Parentheses:
+helloparam = val => "Hello " + val;
+console.log(helloparam("jdk"));
+
+//JS JSON
+let tet = '{"employees":[' +
+    '{"firstName":"John","lastName":"Doe" },' +
+    '{"firstName":"Anna","lastName":"Smith" },' +
+    '{"firstName":"Peter","lastName":"Jones" }]}';
+
+const oj = JSON.parse(tet);
+
+console.log(oj.employees[1].firstName + " " + oj.employees[1].lastName);
