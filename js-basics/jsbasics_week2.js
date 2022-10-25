@@ -1447,4 +1447,3 @@ console.log(Json);
 const o = { name: "John", age: 30, city: "New York" };
 const myJSON = JSON.stringify(o);
 console.log(myJSON);
-
