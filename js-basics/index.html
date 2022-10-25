@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--javascript function in head tag-->
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+    </script>
+</head>
+
+<body>
+    <!--changing content of html using js-->
+    <p id="demo">JavaScript can change HTML content.</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">altersize</button>
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">hide</button>
+
+    <!--To access an HTML element, JavaScript can use the document.getElementById(id) method -->
+    <button type="button" onclick='document.getElementById("demo").innerHTML = 
+    "Hello JavaScript!"'> Click Me!</button>
+
+    <!-- JavaScript can "display" data in different ways -->
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        //Writing into an HTML element, using innerHTML
+        document.getElementById("demo1").innerHTML = "My First JavaScript";
+        document.getElementById("demo1").innerHTML = 5 + 6;
+        // Writing into the HTML output using document.write()
+        document.write("writing content using js");
+        document.write(5 + 8);
+        //Writing into an alert box, using window.alert()
+        alert(5 + 6);
+        //Writing into the browser console, using console.log()
+        console.log("javascript training");
+    </script>
+    <!-- function call from external js file-->
+    <input type="button" onclick="changeContent()" value="display">
+    <br>
+    <p id="de"></p>
+    <input id="age" value="18" />
+    <button onclick="myAge()">Try it</button>
+    
+    <!--linking external js file-->
+    <script src="jsbasics_week1.js">
+    </script>
+    <script src="jsbasics_week2.js"></script>
+</body>
+
+</html>
