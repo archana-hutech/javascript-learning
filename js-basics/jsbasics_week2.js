@@ -1414,3 +1414,37 @@ let tet = '{"employees":[' +
 const oj = JSON.parse(tet);
 
 console.log(oj.employees[1].firstName + " " + oj.employees[1].lastName);
+
+var jj = '{"Name":"Krishna","Email": "XYZ", "CN": "12345"}';
+var data = JSON.parse(jj);                               // converting JSON strings into JavaScript objects
+console.log(data.Email);                                 // xyz
+
+var pq = {
+    Name: "Krishna",
+    Email: "XYZ",
+    CN: 12345
+};
+var dta = JSON.stringify(pq);                          // converting an object into a JSON string
+console.log(dta);
+
+var json = '{ "firstName":"ASHU", "lastName":"BHATI", "studentCode":7 }';
+var student = JSON.parse(json);
+console.log((student.firstName + " " + student.lastName));
+
+const et = '["Ford", "BMW", "Audi", "Fiat"]';
+const myArry = JSON.parse(et);
+console.log(myArry);
+
+//JavaScript to illustrate JSON.stringify() method.  
+var json = { firstName: "ASHU", lastName: "BHATI", studentCode: 7 };
+var student = JSON.stringify(json);
+console.log(student);
+
+var fgh = ["JAVA", "C", "C++", "Python"];                // Create a JSON string from a JavaScript array
+var Json = JSON.stringify(fgh);
+console.log(Json);
+
+const o = { name: "John", age: 30, city: "New York" };
+const myJSON = JSON.stringify(o);
+console.log(myJSON);
+
