@@ -274,19 +274,15 @@ console.log(myClosFuncn());    // function can also access variables defined out
 myClosFunctn();
 console.log(a * a);
 function myClosFunctn() {
-    a = 4;                   // Variables created without a declaration keyword (var, let, or const) are always global 
-    // even if they are created inside a function.         
+    a = 4;                   // Variables created without a declaration keyword  are always global even inside the func       
 }
 
-// Initiate counter
-let cnt = 0;
-// Function to increment counter
-function plus() {
+let cnt = 0;                 // Initiate counter
+function plus() {            // Function to increment counter
     cnt = cnt + 1;
     return cnt;
 }
-// Call plus() 3 times
-plus();
+plus();                      // Call plus() 3 times
 plus();
 plus();
 console.log(cnt);
